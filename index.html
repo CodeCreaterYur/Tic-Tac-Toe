@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="masha.css">
+    <link rel="stylesheet" href="style.css" id="game-style">
+                <link rel="icon" href="icon.png" type="image/x-icon">
+
+      <link href="https://fonts.googleapis.com/css2?family=Font+Name&display=swap" rel="stylesheet">
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.3.1/socket.io.js"></script>
+
+</head>
+<body>
+<div class="container">
+   <h1 style="font-family: 'Roboto', sans-serif;">Tic Tac Toe</h1>
+    <button id="play" class="play-btn">Играть</button>
+
+    <button class="mode-btn" onclick="changeStyle()">0+ masha </button>
+<button class="mode-btn" onclick="resetStyle()">Mortal combat </button>
+    <div id="menu" class="menu hidden">
+        <button id="playAI" class="mode-btn">Против AI</button>
+        <button id="playFriend" class="mode-btn">Против друга</button>
+        <div>
+            <p class="sp">Выберите уровень сложности:</p>
+            <button id="easy" class="btn">Легко</button>
+            <button id="medium" class="btn">Средне</button>
+            <button id="hard" class="btn">Сложно</button>
+        </div>
+    </div>
+    <div id="board" class="board hidden"></div>
+    <button id="reset" class="reset-btn hidden">Сброс</button>
+    <div id="score" class="score hidden">
+        <p class="p">Счёт игрока X: <span class="p" id="playerXScore">0</span></p>
+        <p class="p">Счёт игрока O: <span class="p"  id="playerOScore">0</span></p>
+    </div>
+</div>
+<div id="resultOverlay" class="overlay hidden">
+    <div id="resultMessage"></div>
+    <button id="closeResultBtn">Close</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+
